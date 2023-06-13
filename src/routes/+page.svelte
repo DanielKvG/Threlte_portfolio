@@ -1,28 +1,29 @@
-<Threlte.Canvas>
+<Canvas>
 
-    <Threlte.PerspectiveCamera
+    <PerspectiveCamera
         position={{ x:20, y:20, z:20 }}
     >
-        <Threlte.OrbitControls/>
-    </Threlte.PerspectiveCamera>
-    
-    <Threlte.Mesh
-        geometry={new Three.SphereGeometry(4,64,64)}
-        material={new Three.MeshStandardMaterial({ color: 'white' })}
-    />
+        <OrbitControls/>
+    </PerspectiveCamera>
 
-    <Threlte.AmbientLight color="white" intensity={0.2} />
+    <GLTF url="models/duckkie2.2.glb"/>
 
-    <Threlte.DirectionalLight
+    <AmbientLight color="white" intensity={0.2} />
+
+    <DirectionalLight
         color="white"
         intensity={2}
         position={{ x:10, y:20 }}
     />
 
-</Threlte.Canvas>
+</Canvas>
 
 <script lang="ts">
-    import * as Threlte from '@threlte/core'
+    import { Canvas, PerspectiveCamera, OrbitControls, Mesh, AmbientLight, DirectionalLight} from '@threlte/core'
     import * as Three from 'three'
+    import { GLTF } from '@threlte/extras'
     import * as Utils from 'three/src/math/MathUtils.js'
+
+
+
 </script>
